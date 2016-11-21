@@ -39,6 +39,7 @@ class MyUser(AbstractUser):
             return True
         return False
 
+
 class Relationship(models.Model):
     follower = models.ForeignKey(MyUser, related_name='relationship_set_follower')
     followee = models.ForeignKey(MyUser, related_name='relationship_set_followee')
